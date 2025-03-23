@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Mania</title>
+    <style>
+        /* Apply background image to the entire body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('cyberpunk-2077-zero-two-darling-in-the-franxx-neon-3840x2160-4238.jpg'); /* Replace with your image file name */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the background image */
+            background-attachment: fixed; /* Makes the background fixed while scrolling */
+            color: #fff; /* Default text color for better contrast */
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(68, 68, 68, 0.8); /* Semi-transparent background */
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f4f4f4;
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+        }
+
+        .movie-card {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            color: #333; /* Dark text for contrast */
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .movie-card h3 {
+            font-size: 1.2em;
+            margin: 10px;
+        }
+
+        .movie-card p {
+            font-size: 0.9em;
+            margin: 10px;
+            color: #555;
+        }
+
+        .play-button, .signin-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .play-button:hover, .signin-button:hover {
+            background-color: #555;
+        }
+
+        .signin-form {
+            display: none; /* Hidden by default */
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+
+        .signin-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .signin-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .signin-form button:hover {
+            background-color: #555;
+        }
+
+        .thank-you {
+            display: none; /* Hidden by default */
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Movie Mania</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Movies</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Movie Mania</h1>
+        <p>Your ultimate destination for the latest movies and reviews.</p>
+        <button class="play-button" onclick="playSong()">Play Song</button>
+        <button class="signin-button" onclick="showSignInForm()">Sign In</button>
+    </section>
+
+    <section class="movie-container">
+        <!-- First Movie Card with the new image -->
+        <div class="movie-card">
+            <img src="https://cdn.discordapp.com/attachments/1321172827092684812/1322632803673964565/Mitsuri3.jpg?ex=67e0fc09&is=67dfaa89&hm=71886049066f9aa35a870461e42d093561647d28de8279c4bbca9e0ea00ea721&" alt="Movie 1">
+            <h3>Movie Title 1</h3>
+            <p>Genre: Action</p>
+        </div>
+
+        <!-- Other Movie Cards -->
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 2">
+            <h3>Movie Title 2</h3>
+            <p>Genre: Comedy</p>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 3">
+            <h3>Movie Title 3</h3>
+            <p>Genre: Drama</p>
+        </div>
+
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/200x300" alt="Movie 4">
+            <h3>Movie Title 4</h3>
+            <p>Genre: Sci-Fi</p>
+        </div>
+    </section>
+
+    <!-- Sign In Form -->
+    <div class="signin-form" id="signinForm">
+        <h2>Sign In</h2>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="submitForm()">Submit</button>
+    </div>
+
+    <!-- Thank You Message -->
+    <div class="thank-you" id="thankYouMessage">
+        <h2>Thank You!</h2>
+        <p>Your details have been submitted.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Movie Mania. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to play a song
+        function playSong() {
+            const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'); // Replace with your song URL
+            audio.play()
+                .then(() => {
+                    console.log('Song is playing');
+                })
+                .catch(error => {
+                    console.error('Error playing song:', error);
+                });
+        }
+
+        // Function to show the Sign In form
+        function showSignInForm() {
+            document.getElementById('signinForm').style.display = 'block';
+        }
+
+        // Function to handle form submission
+        function submitForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email && password) {
+                // Hide the form
+                document.getElementById('signinForm').style.display = 'none';
+                // Show the Thank You message
+                document.getElementById('thankYouMessage').style.display = 'block';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+
+</body>
+</html>
